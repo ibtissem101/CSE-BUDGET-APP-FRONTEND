@@ -9,8 +9,8 @@ export default {
     extend: {
       colors: {
         Base: {
-          White: "FFFFFF",
-          Black: "080325",
+          White: "#FFFFFF",
+          Black: "#080325",
         },
         Violet: {
           100: "#FCFDFE",
