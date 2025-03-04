@@ -74,7 +74,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"], // Default body font
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
     },
   },
