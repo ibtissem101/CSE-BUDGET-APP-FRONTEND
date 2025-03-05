@@ -1,6 +1,6 @@
 const WalletPage = () => {
   return (
-    <div className="md:ml-[300px] md:mt-12 p-4 max-w-7xl mx-auto  md:bg-white bg-gradient-to-b from-white to-Violet-200">
+    <div className="md:ml-[300px] md:mr-12 md:mt-12 p-4 max-w-7xl mx-auto  md:bg-white bg-gradient-to-b ">
       <h1 className="text-2xl md:text-3xl font-bold ">My Wallet</h1>
       <div className="text-gray-600 mb-4 md:text-base md:mb-12">
         Keep track of your financial plan
@@ -11,15 +11,15 @@ const WalletPage = () => {
             <div className="flex flex-col justify-between">
               <div className="text-lg flex gap-2 font-bold">
                 <img
-                  src="/hello.png"
+                  src="myWallet/hello.png"
                   className="h-5 w-5 md:h-8 md:w-8"
                   alt=""
                 />
                 <div className="flex w-full justify-between text-[16px] md:text-2xl md:mb-4 text-Neutral-100 font-semibold">
                   <div>Hi Adrian!</div>
                   <img
-                    src="/dots-vertical.png"
-                    className="h-4 w-4 md:h-8 md:w-8"
+                    src="myWallet/dots-vertical.png"
+                    className="h-[18px] w-[18px] md:h-8 md:w-8"
                     alt=""
                   />
                 </div>
@@ -36,7 +36,7 @@ const WalletPage = () => {
               title="Send Payment"
             >
               <img
-                src="/send.png"
+                src="myWallet/send.png"
                 alt="Send"
                 className="w-10 h-10 md:w-16 md:h-16"
               />
@@ -50,7 +50,7 @@ const WalletPage = () => {
               title="Request Payment"
             >
               <img
-                src="/send.png"
+                src="myWallet/send.png"
                 alt="Request"
                 className="w-10 h-10 md:w-16 md:h-16"
               />
@@ -234,7 +234,7 @@ const WalletPage = () => {
       </div>
 
       <button className="w-full md:flex-col md:mt-12 md:border-Neutral-40 border-Violet-500 bg-Violet-200  mt-6 p-4 gap-3 text-xs font-semibold text-Violet-500 rounded-lg  border-[1px] hover:bg-Violet-200 flex items-center justify-center">
-        <img src="/plus.png" className="h-10 w-10 " alt="" />
+        <img src="myWallet/plus.png" className="h-10 w-10 " alt="" />
         <div className="md:text-lg">Create New Wallet</div>
       </button>
     </div>
