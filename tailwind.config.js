@@ -17,6 +17,7 @@ export default {
           200: "#F7F8FD",
           300: "#B8B6F7",
           400: "#8880E5",
+          500: "#4F46E5",
           600: "#473FCE",
           700: "#3821C0",
           800: "#120563",
@@ -74,7 +75,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
     },
   },
