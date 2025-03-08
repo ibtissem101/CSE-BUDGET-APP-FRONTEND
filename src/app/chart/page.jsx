@@ -1,31 +1,13 @@
 "use client";
 import { CartesianGrid, Line, ResponsiveContainer, Tooltip, XAxis, YAxis, LineChart } from "recharts";
 import React, { useState, useEffect } from "react";
-import Avatar from "./avatar.svg";
-import Chat from "./chat.svg";
-import Menu from "./menu.svg";
-import Settings from "./settings.svg";
-import Tracker from "./tracker.svg";
 import Bonus from "./bonus.svg";
 import Outcome from "./outcome.svg";
 import Income from "./income.svg";
-import Trackerm from "./Trackermobile.svg";
-import Menum from "./menumobile.svg";
+import Sidebar from "../components/sidebar/page"; // Ensure the correct path to the Sidebar component
+import Navbar from "../components/navbar/page"; // Ensure the correct path to the Navbar component
 
 // Icons
-const Useravatar = () => (
-  <img src={Avatar.src} alt="avatar" className="w-[25px] h-[25px] md:w-[32px] md:h-[32px]" />
-);
-const Chaticon = () => (
-  <img src={Chat.src} alt="chat" className="w-[25px] h-[25px] md:w-[32px] md:h-[32px]" />
-);
-const Menuicon = () => <img src={Menu.src} alt="menu" className="" />;
-const Settingsicon = () => (
-  <img src={Settings.src} alt="Settings" className="w-[25px] h-[25px] md:w-[32px] md:h-[32px]" />
-);
-const Trackerlogo = () => (
-  <img src={Tracker.src} alt="Tracker" className="w-[25px] h-[25px] md:w-[32px] md:h-[32px]" />
-);
 const Bonusicon = () => (
   <img src={Bonus.src} alt="Bonus" className="w-[48px] h-[48px]" />
 );
@@ -35,13 +17,7 @@ const Outcomeicon = () => (
 const Incomeicon = () => (
   <img src={Income.src} alt="Income" className="w-[48px] h-[48px]" />
 );
-const Menumobile = () => (
-  <img src={Menum.src} alt="menu" className="w-[20px] h-[20px]" />
-);
 
-const Trackermobile = () => (
-  <img src={Trackerm.src} alt="Tracker" className="w-[20px] h-[20px]" />
-);
 
 // Data
 const data = [
@@ -84,76 +60,6 @@ const MyLineChart = () => {
   );
 };
 
-// Sidebar Component
-const Sidebar = ({ isVisible, toggleSidebar }) => {
-  return (
-    <div
-      className={`fixed inset-y-0 right-0 w-[18.75rem] h-screen bg-Base/Black transform transition-transform duration-300 ease-in-out ${
-        isVisible ? "translate-x-0 shadow-lg" : "translate-x-full"
-      } md:translate-x-0 md:relative md:w-[18.75rem] md:h-screen md:bg-Base/Black`}
-    >
-      <div className="flex items-center text-Base/White font-Inter font-normal text-2xl italic md:mt-[3rem] mt-8 ml-[2rem]">
-        <button className="flex items-center gap-x-2">
-          <Trackerlogo />Tracker
-        </button>
-        <button
-          className="flex items-center justify-center rounded-3xl w-[2.5rem] h-[2.5rem] bg-Violet/Main-500 ml-auto mr-[1.125rem]"
-          onClick={toggleSidebar}
-        >
-          <Menuicon />
-        </button>
-      </div>
-      <div className="font-semibold text-xs md:text-sm text-Neutral-50 font-Inter ml-[1.125rem] text-Neutral-10 md:mt-[5rem] mt-12">
-        <button className="flex items-center w-[16.5rem] h-[4.5rem] gap-x-2 p-6">
-          <Chaticon />My Wallet
-          <div className="flex items-center justify-center text-xs font-semibold rounded-full w-[1.5rem] h-[1.3rem] bg-Error ml-[4rem]">12</div>
-        </button>
-        <button className="flex items-center w-[16.5rem] h-[4.5rem] gap-x-2 p-6">
-          <Chaticon />My Card
-        </button>
-        <button className="flex items-center bg-Violet-900 w-[16.5rem] gap-x-2 h-[4.5rem] p-6">
-          <Chaticon />Finance Chart
-        </button>
-        <button className="flex items-center w-[16.75rem] h-[5rem] p-6 gap-x-2">
-          <Chaticon />Recent Transactions
-        </button>
-      </div>
-      <div className="mt-[9rem] md:fixed md:bottom-[3.5rem]">
-        <button className="flex items-center ml-[2rem] text-sm font-semibold font-Inter text-Neutral-50 mb-4 gap-x-4">
-          <Settingsicon />Settings
-        </button>
-        <div className="ml-[1.125rem] border-solid border border-Neutral-90 w-[16.5rem] mb-[1rem]"></div>
-        <button className="flex items-center font-semibold text-sm md:text-base text-Neutral-10 font-Inter ml-[2rem] gap-x-4">
-          <Useravatar />Adrian Tra
-        </button>
-      </div>
-    </div>
-  );
-};
-
-const Mobileheader = ({ toggleSidebar }) => {
-  return (
-    <div className="bg-Base/White w-full md:hidden flex items-center justify-between h-[3.25rem] mt-2 px-4 border-b border-[#E3E8EF]">
-      <button className="gap-x-1 flex items-center font-Inter font-normal text-xs text-Violet/Main-500">
-        <Trackermobile />Tracker
-      </button>
-      <button onClick={toggleSidebar}>
-        <Menumobile />
-      </button>
-    </div>
-  );
-};
-
-// Header Component
-const Header = () => {
-  return (
-    <div className="px-6 md:px-0 mt-4">
-      <div className="text-Neutral-100 font-bold text-lg md:text-3xl mb-2 font-Inter">Finance Chart</div>
-      <div className="text-Neutral-80 font-normal md:text-sm text-xs font-Inter">Keep track your financial plan</div>
-    </div>
-  );
-};
-
 // ChartControls Component
 const ChartControls = ({ selectedChart, selectedYear, handleChartChange, handleYearChange }) => {
   return (
@@ -185,6 +91,16 @@ const ChartControls = ({ selectedChart, selectedYear, handleChartChange, handleY
           </select>
         </div>
       </div>
+    </div>
+  );
+};
+
+// Header Component
+const Header = () => {
+  return (
+    <div className="px-6 md:px-0 mt-4">
+      <div className="text-Neutral-100 font-bold text-lg md:text-3xl mb-2 font-Inter">Finance Chart</div>
+      <div className="text-Neutral-80 font-normal md:text-sm text-xs font-Inter">Keep track your financial plan</div>
     </div>
   );
 };
@@ -228,7 +144,7 @@ const StatsCards = () => {
 const ChartPage = () => {
   const [selectedChart, setSelectedChart] = useState("income");
   const [selectedYear, setSelectedYear] = useState("this-year");
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu visibility
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -250,18 +166,19 @@ const ChartPage = () => {
     setSelectedYear(event.target.value);
   };
 
-  const toggleSidebar = () => {
-    if (isMobile) {
-      setIsSidebarVisible(!isSidebarVisible);
-    }
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <div className="flex flex-between bg-Base/White">
-      <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
+    <div className="flex flex-between bg-Base/White mt-[5rem] md:mt-0 md:ml-[300px]">
+      {/* Pass isMobileMenuOpen and toggleMobileMenu to Sidebar */}
+      <Sidebar isMobileMenuOpen={isMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} />
       <div className="w-full md:mt-[9rem] md:ml-[5rem]">
-        <Mobileheader toggleSidebar={toggleSidebar} />
+        {/* Replace Header with Navbar */}
+        <Navbar toggleSidebar={toggleMobileMenu} />
         <Header />
+
         <div className="mt-8 mb-8 ml-4">
           <ChartControls
             selectedChart={selectedChart}
@@ -270,7 +187,7 @@ const ChartPage = () => {
             handleYearChange={handleYearChange}
           />
           {/* Conditionally render the chart on mobile only when the sidebar is not visible */}
-          {(!isMobile || !isSidebarVisible) && <MyLineChart />}
+          {(!isMobile || !isMobileMenuOpen) && <MyLineChart />}
         </div>
         <StatsCards />
       </div>
