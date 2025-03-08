@@ -324,7 +324,7 @@ const WalletPage = () => {
 
       <button
         onClick={() => setIsModalOpen(true)}
-        className="w-full md:flex-col md:mt-12 md:border-Neutral-40 border-Violet-500 bg-Violet-200  mt-6 p-4 gap-3 text-xs font-semibold text-Violet-500 rounded-lg  border-[1px] hover:bg-Violet-200 flex items-center justify-center"
+        className="w-full md:flex-col md:mt-5 md:border-Neutral-40 border-Violet-500 bg-Violet-200  mt-6 p-4 gap-3 text-xs font-semibold text-Violet-500 rounded-lg  border-[1px] hover:bg-Violet-200 flex items-center justify-center"
       >
         <img src="myWallet/plus.png" className="h-10 w-10 " alt="" />
         <div className="md:text-lg">Create New Wallet</div>
