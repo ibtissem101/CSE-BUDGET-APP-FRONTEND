@@ -51,7 +51,7 @@ export default {
           Default: "#64748B",
           Disabled: "#64748B",
         },
-        Error: {
+        Success: {
           100: "#F9FDFA",
           200: "#ECF7EE",
           300: "#58C063",
@@ -62,7 +62,7 @@ export default {
           800: "#035647",
           900: "#033022",
         },
-        Success: {
+        Error: {
           100: "#FDF8F8",
           200: "#FCF1F1",
           300: "#EB9C9C",

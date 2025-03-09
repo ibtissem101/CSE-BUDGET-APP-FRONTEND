@@ -120,7 +120,7 @@ const TransactionsTable = () => {
                 <td
                   className={`h-[4rem] py-2 px-2 md:px-12 text-left ${
                     formattedAmount.startsWith("-")
-                      ? "text-Error"
+                      ? "text-Error-500"
                       : "text-Success-500"
                   }`}
                 >
@@ -186,7 +186,7 @@ const TransactionPage = () => {
               placeholder="Search"
               className="w-full md:w-[21.375rem] h-[2.25rem] md:h-[3rem] pl-4 border border-Neutral-40 rounded-3xl bg-Base/White"
             />
-            <button className="flex items-center justify-center w-[40px] h-[40px] md:w-[2.5rem] md:h-[2.5rem] bg-Violet/Main-500 ml-4 rounded-3xl">
+            <button className="flex items-center justify-center w-[40px] h-[40px] md:w-[2.5rem] md:h-[2.5rem] bg-Violet-500 ml-4 rounded-3xl">
               <Searchicon />
             </button>
           </div>
@@ -195,7 +195,7 @@ const TransactionPage = () => {
           <TransactionsTable />
         </div>
         <div className="mb-[5rem] md:mb-[6rem]">
-          <button className="rounded-3xl bg-Violet/Main-500 h-[3rem] hidden md:block w-[15.5rem] text-lg text-Base/White font-semibold">
+          <button className="rounded-3xl bg-Violet-500 h-[3rem] hidden md:block w-[15.5rem] text-lg text-Base-White font-semibold">
             Download the Excel File
           </button>
         </div>

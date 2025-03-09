@@ -91,7 +91,7 @@ const ChartControls = ({
             id="chart-type"
             value={selectedChart}
             onChange={handleChartChange}
-            className="mt-1 block w-full p-2 border border-Neutral-40 bg-Base/White rounded-md shadow-sm"
+            className="mt-1 block w-full p-2 border border-Neutral-40 bg-Base-White rounded-md shadow-sm"
           >
             <option value="income">Income Chart</option>
             <option value="outcome">Outcome Chart</option>
@@ -103,7 +103,7 @@ const ChartControls = ({
             id="year"
             value={selectedYear}
             onChange={handleYearChange}
-            className="mt-1 block w-full p-2 border border-Neutral-40 bg-Base/White rounded-md shadow-sm"
+            className="mt-1 block w-full p-2 border border-Neutral-40 bg-Base-White rounded-md shadow-sm"
           >
             <option value="this-year">This Year</option>
             <option value="2024">2024</option>
