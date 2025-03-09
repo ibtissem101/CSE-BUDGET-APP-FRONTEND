@@ -356,7 +356,7 @@ const MyCardPage = () => {
             </svg>
           </div>
           <Link
-            href="/payTax"
+            href="/myCard/payTax"
             className="flex justify-between items-center p-4 bg-white rounded-lg  cursor-pointer hover:bg-gray-50"
           >
             <div className="flex items-center gap-3">
@@ -376,7 +376,10 @@ const MyCardPage = () => {
               />
             </svg>
           </Link>
-          <div className="flex justify-between items-center p-4 bg-white rounded-lg cursor-pointer hover:bg-gray-50">
+          <Link
+            href="/myCard/invoice"
+            className="flex justify-between items-center p-4 bg-white rounded-lg cursor-pointer hover:bg-gray-50"
+          >
             <div className="flex items-center gap-3">
               <div className="w-1 h-12 bg-green-500 rounded"></div>
               <span>Make Invoice</span>
@@ -393,7 +396,7 @@ const MyCardPage = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </div>
+          </Link>
           <div
             className="flex justify-between items-center p-4 bg-white rounded-lg cursor-pointer hover:bg-gray-50"
             onClick={() => setIsReferFriendModalOpen(true)}

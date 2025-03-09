@@ -38,47 +38,6 @@ const SettingsPage = () => {
           </div>
         </div>
 
-        {/* Notification Preferences */}
-        <div className="bg-Neutral-20 border border-Neutral-40 rounded-lg p-6">
-          <h2 className="text-lg font-semibold mb-4">
-            Notification Preferences
-          </h2>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-Neutral-40">
-              <div>
-                <p className="text-Neutral-90">Push Notifications</p>
-                <p className="text-sm text-Neutral-70">
-                  Get notified about important updates
-                </p>
-              </div>
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="sr-only peer"
-                  defaultChecked
-                />
-                <div className="w-11 h-6 bg-Neutral-40 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-Violet-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-Violet-500"></div>
-              </label>
-            </div>
-            <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-Neutral-40">
-              <div>
-                <p className="text-Neutral-90">Email Notifications</p>
-                <p className="text-sm text-Neutral-70">
-                  Receive email updates about your account
-                </p>
-              </div>
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="sr-only peer"
-                  defaultChecked
-                />
-                <div className="w-11 h-6 bg-Neutral-40 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-Violet-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-Violet-500"></div>
-              </label>
-            </div>
-          </div>
-        </div>
-
         {/* Privacy & Security */}
         <div className="bg-Neutral-20 border border-Neutral-40 rounded-lg p-6">
           <h2 className="text-lg font-semibold mb-4">Privacy & Security</h2>
