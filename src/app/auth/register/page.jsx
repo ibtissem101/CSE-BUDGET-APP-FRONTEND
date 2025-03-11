@@ -123,9 +123,7 @@ const RegisterPage = () => {
                 >
                   <img
                     src={
-                      showPassword
-                        ? "/myCard/eyeclosed.png"
-                        : "/myCard/view.png"
+                      showPassword ? "/auth/close-eye.png" : "/auth/show.png"
                     }
                     alt={showPassword ? "Hide password" : "Show password"}
                     className="w-5 h-5"
@@ -154,8 +152,8 @@ const RegisterPage = () => {
                   <img
                     src={
                       showConfirmPassword
-                        ? "/myCard/eyeclosed.png"
-                        : "/myCard/view.png"
+                        ? "/auth/close-eye.png"
+                        : "/auth/show.png"
                     }
                     alt={
                       showConfirmPassword ? "Hide password" : "Show password"

@@ -103,7 +103,7 @@ const AddCardModal = ({ isOpen, onClose }) => {
                   className="absolute right-3 top-1/2 transform -translate-y-1/2"
                 >
                   <img
-                    src={showCVV ? "/myCard/eyeclosed.png" : "/myCard/copy.png"}
+                    src={showCVV ? "/auth/close-eye.png" : "/auth/show.png"}
                     alt={showCVV ? "Hide CVV" : "Show CVV"}
                     className="w-5 h-5"
                   />
