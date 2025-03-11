@@ -13,15 +13,16 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   const pathname = usePathname();
   const isAuthPage = pathname?.startsWith("/auth");
-
+  const isHomePage = pathname === "/";
+  
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
-        {!isAuthPage && <Navbar />}
-        {!isAuthPage && <Sidebar />}
+        {!isAuthPage && !isHomePage && <Navbar />}
+        {!isAuthPage && !isHomePage && <Sidebar />}
         <main
           className={`transition-all duration-300 ${
-            !isAuthPage ? "pt-[60px] md:pt-12" : ""
+            !isAuthPage && !isHomePage ? "pt-[60px] md:pt-12" : ""
           }`}
         >
           {children}

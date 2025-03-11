@@ -83,7 +83,7 @@ const ChartControls = ({
   return (
     <div className="flex flex-col md:flex-row justify-between mb-8 px-4 md:px-0 md:mr-16">
       <div className="font-bold text-lg md:text-2xl mb-4 md:mb-0">
-        Stastic
+        Statistic
       </div>
       <div className="flex md:flex-row gap-4 md:w-auto text-sm font-normal">
         <div className="w-full md:w-auto">
@@ -119,9 +119,7 @@ const ChartControls = ({
 const Header = () => {
   return (
     <div className="px-4 md:px-0">
-      <div className="text-2xl md:text-3xl font-bold mb-2">
-        Finance Chart
-      </div>
+      <div className="text-2xl md:text-3xl font-bold mb-2">Finance Chart</div>
       <div className="text-gray-600 mb-4 md:text-base">
         Keep track your financial plan
       </div>

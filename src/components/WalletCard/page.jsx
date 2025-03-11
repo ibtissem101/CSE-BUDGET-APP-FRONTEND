@@ -16,9 +16,9 @@ const WalletCard = ({
     <div className="p-4 bg-white rounded-md border border-Neutral-40 md:h-[162px]">
       <div className="flex flex-col justify-between mb-2">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span>{icon}</span>
-            <span className="font-medium md:text-lg text-Neutral-90">
+          <div className="flex items-center gap-2 max-w-[70%] overflow-hidden">
+            <span className="flex-shrink-0">{icon}</span>
+            <span className="font-medium md:text-lg text-Neutral-90 truncate overflow-hidden">
               {title}
             </span>
           </div>
